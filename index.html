@@ -17,9 +17,12 @@
   };
 </script>
 
+<link rel="stylesheet" href="./style.css">
+  
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://tikzjax.com/v1/tikzjax.css" />
+<script src="https://tikzjax.com/v1/tikzjax.js"></script>
 
-  <link rel="stylesheet" href="https://magenta-id.github.io/Trik-menghitung-perkalian/style.css">
 
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +62,7 @@
         
           <li><strong>Beban Kognitif Tambahan</strong>
             <ul type="circle">
-Tidak seperti perkalian atau pembagian yang memiliki algoritma hitung baku di kertas (seperti perkalian bersusun atau porogapit), perhitungan nilai akurat akar non-kuadrat sempurna hampir selalu membutuhkan estimasi khusus, tabel, atau kalkulator.
+              <li>Tidak seperti perkalian atau pembagian yang memiliki algoritma hitung baku di kertas (seperti perkalian bersusun atau porogapit), perhitungan nilai akurat akar non-kuadrat sempurna hampir selalu membutuhkan estimasi khusus, tabel, atau kalkulator.</li>
             </ul>
           </li>
         </ul>
@@ -78,166 +81,165 @@ Tidak seperti perkalian atau pembagian yang memiliki algoritma hitung baku di ke
         \end{align*}
         \]
         
-        <p>Tapi bagaimana jika angkanya besar? Seperti \(\sqrt{484} \text{ dan } \sqrt{729}\) atau bagaimana jika angkanya bukan merupakan kuadrat sempurna seperti \(\sqrt{} \) </p>
+        <p>Tapi bagaimana jika angkanya besar? Seperti \(\sqrt{484} \text{ dan } \sqrt{729}\) atau bagaimana jika angkanya bukan merupakan kuadrat sempurna seperti \(\sqrt{18} \text{ dan } \sqrt{24}\).</p>
 
-Apa akan efektif menggunakan cara lama seperti itu? Berapa lama yang dibutuhkan? Dan apa akan benar-benar menemukan jawabannya? 
+        <p>Apa akan efektif menggunakan cara lama seperti itu? Berapa lama yang dibutuhkan? Dan apa akan benar-benar menemukan jawabannya?</p>
 
-Cara lama itu tidak akan bisa diandalkan, apalagi jika kita sedang melaksanakan ujian atau diminta untuk mencari nilai dengan waktu yang terbatas. 
+        <p>Cara lama itu tidak akan bisa diandalkan, apalagi jika kita sedang melaksanakan ujian atau diminta untuk mencari nilai dengan waktu yang terbatas.</p>
 
-Lalu bagaimana cara yang lebih cepat, efektif, dan akurat? 
+        <p>Lalu bagaimana cara yang lebih cepat, efektif, dan akurat?</p>
 
-Berikut adalah beberapa cara yang bisa kita coba untuk mencari nilai akar dengan lebih baik:
+        <p>Berikut adalah beberapa cara yang bisa kita coba untuk mencari nilai akar dengan lebih baik:</p>
 
-📝 Materi yang Dibahas:
-Trik Pisahkan Dua Digit
-Pohon Faktor
-Estimasi Nilai Desimal Akar
-
+        <nav>
+          <div id="daftar_isi">
+            <h3>📝 Materi yang Dibahas:</h3>
+            <ol>
+              <li>Trik Pisahkan Dua Digit</li>
+              <li>Pohon Faktor</li>
+              <li>Estimasi Nilai Desimal Akar</li>
+            </ol>
+          </div>
+        </nav>
       </section>
       
-1. Trik Pisahkan Dua Digit
-Trik yang satu ini cukup sederhana, kita hanya perlu membagi akar kuadrat menjadi dua bagian, dengan garis tengah nya adalah di depan dua Digit terakhir, lalu mencari angka kuadrat yang mendekati masing-masing dari dua bagian tersebut.
+      <section id="Trik_pisah">
+        <h2 class="judul_Materi">1. Trik Pisahkan Dua Digit</h2>
 
-CATATAN PENTING:
-Rumus ini hanya bisa digunakan jika hasil akarnya berupa bilangan bulat (kuadrat sempurna). Bagaimana cara kita tahu hasil dari nilai akar yang kita cari bulat atau tidak? Akan kita bahas di bawah! 
+        <p>Trik yang satu ini cukup sederhana, kita hanya perlu membagi akar kuadrat menjadi dua bagian, dengan garis tengah nya adalah di depan dua Digit terakhir, lalu mencari angka kuadrat yang mendekati masing-masing dari dua bagian tersebut.</p>
 
-Contoh 1 : 
+        <div class="catatan">
+          <h3>CATATAN PENTING:</h3>
+          
+          <p>Rumus ini hanya bisa digunakan jika hasil akarnya berupa bilangan bulat (kuadrat sempurna). Bagaimana cara kita tahu hasil dari nilai akar yang kita cari bulat atau tidak? Akan kita bahas di bawah!</p>
+        </div>
 
-Bagi menjadi dua bagian dengan garis tengah di dua Digit terakhir:
+        <p><strong>Contoh 1 :</strong> \(\mathbf{\sqrt{729}}\)</p>
 
-= 
+        <p>Bagi menjadi dua bagian dengan garis tengah di dua Digit terakhir:</p>
 
-= 
+        \[\sqrt{729} \rightarrow 7 \; | \; 29\]
 
-a. Menentukan Puluhan (Bagian Depan):
+        
+        <p><strong>a. Menentukan Puluhan (Bagian Depan):</strong><br>Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 7 tanpa melebihi 7 :
 
-Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 7 tanpa melebihi 7 :
+        \[2^2 = 4\]
 
- = 
+        Maka ditemukan hasil puluhannya = \(20\)</p>
 
-Maka ditemukan hasil puluhannya = 
+        <p><strong>b. Menentukan Satuan (Bagian Belakang):</strong><br>Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 9 :
 
-b. Menentukan Satuan (Bagian Belakang):
+        \[
+        \begin{align*}
+        3^2 &amp;= 9\\
+        7^2 &amp;= 49
+        \end{align*}
+        \]
 
-Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 9
+        Maka jawabannya antara \(23 \text{ atau } 27\)</p>
 
- = 
+        <p>Ada dua cara untuk menentukannya:</p>
 
- = 
+        <p><strong>Cara Pertama kita bisa ambil angka tengah dari keduanya:</strong></p>
 
-Maka jawabannya antara 23 atau 27
+        \[25^2 = 625\]
 
-Ada dua cara untuk menentukannya:
+        <p>Karena \(625 \lt 729\)<br>
+           maka hasilnya pasti "\(27\)"
 
-Cara Pertama kita bisa ambil angka tengah dari keduanya:
+        <p><strong>Cara Kedua kita bisa cek satu-satu agar lebih pasti:</strong></p>
 
- = 
+        \[
+        \begin{align*}
+        23^2 &amp;= 529\\
+        \mathbf{27^2} &amp;\mathbf{= 729}
+        \end{align*}
+        \]
 
-Karena 
- < 
-Maka hasilnya pasti “ 
- ”
-Cara Kedua kita bisa cek satu-satu agar lebih pasti:
+        <img class="gambar" data-original-height="768" data-original-width="1408" title="Trik pisah dua digit" alt="Akar kuadrat 27" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtoFSKBZHvByvIe49kLYczg2A6mza98X9KwB1_Rs9ne_84Bn_aQQiza2y-0Sq9dfkdp-9uM-sf9ugXxwSk1jUSdj_svLAzC2vW6Q4nVO-n7bh8g1t2OpO97Svd761JMD-4b1daLhd9-45NFVAl59lY1-BVj_n7BQPrzwKdYAOgrInE4W8k7qY_SW5OrmDq/s1600/1786024241906.png"/>
 
- = 
- = 
-Maka jawabannya:
- = 
+        <p><strong>Contoh 2 :</strong> \(\mathbf{\sqrt{3364}}\)</p>
 
+        <p>Bagi menjadi dua bagian dengan patokan garis tengahnya adalah Dua Digit terakhir:</p>
 
+        \[\sqrt{3364} \rightarrow 33 \; | \; 64\]
 
-Contoh 2 : 
+        <p><strong>a. Menentukan Puluhan (Bagian Depan):</strong><br>Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 33 tanpa melebihi 33:
 
-Bagi menjadi dua bagian dengan patokan garis tengahnya adalah Dua Digit terakhir:
+          \[5^2 = 25\]
 
-= 
-= 
-a. Menentukan Puluhan (Bagian Depan):
+Maka ditemukan hasil puluhannya = \(50\)</p>
 
-Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 33 tanpa melebihi 33:
+        <p><strong>b. Menentukan Satuan (Bagian Belakang):</strong><br>Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 4 :
+        \[
+        \begin{align*}
+        2^2 &amp;= 4\\
+        8^2 &amp;= 64
+        \end{align*}
+        \]
+  
+        Maka jawabannya antara \(52 \text{ atau } 58\)</p>
 
- = 
+        <p>Ingat ada dua cara untuk menentukannya:</p>
 
-Maka ditemukan hasil puluhannya = 
+        <p><strong>Cara Pertama kita bisa ambil angka tengah dari keduanya:</strong>
 
-b. Menentukan Satuan (Bagian Belakang):
+          \[55^2 = 3025\]
+          
+        <br>Karena \(3364 \gt 3025\)
+        <br>Maka hasilnya pasti "\(58\)" </p>
 
-Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 4 :
+        <p><strong>Cara Kedua cek satu-satu:</strong></p>
+        
+        \[
+        \begin{align*}
+        52^2 &amp;= 2704\\
+        \mathbf{58^2} &amp;\mathbf{= 3364}
+        \end{align*}
+        \]
 
- = 
+        <img class="gambar" data-original-height="992" data-original-width="1069" title="Trik pisah dua digit-2" alt="Akar kuadrat 58" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz2eOJj5OCmpIV-ZXWAtiMwKnsqdzeOMSoolN8LDdiJhU5Vs7m8m_S2WGqibp-DyAaJ-reSXwyoF0Ey59Unj5-4cfkLdM0p7Yf5JF0nZHUqyBCGWcPPGJ82-2slQ6AygqIwSvqqtNh4Ai6xyRP2U9fPylVdwxJSX0da3oVQrjtudfJo-fCP2ilHqwTXfjU/s1600/1786114033537.png"/>
+        
+        <h3 class="sub_bab">Syarat Wajib & Cara Cek Apakah Hasil Akar Berupa Bilangan Bulat</h3>
 
- = 
+        <p>Trik di atas terasa sangat cepat dan mudah, bukan? Namun, perlu diingat bahwa cara ini khusus berlaku untuk kuadrat sempurna (hasil akar berupa bilangan bulat). Yuk, kita bahas cara mengetahui apakah suatu angka memiliki hasil bulat atau tidak!</p>
 
-Maka jawabannya antara 52 atau 58
+        <p><strong>I. Cek Cepat dari Digit Terakhir (Filter Pertama)</strong></p>
+        
+        <p>Suatu bilangan bulat <strong>pasti bukan</strong> kuadrat sempurna jika angka terakhirnya adalah:</p>
 
-Ingat ada dua cara untuk menentukannya:
+        \[\mathbf{2, 3, 7,} \text{ dan }\mathbf{8}\]
 
-Cara Pertama kita bisa ambil angka tengah dari keduanya:
+        <p>Jika bilangan berakhiran salah satu dari empat angka di atas (misal \(\sqrt{1357}\) atau \(\sqrt{482}\), Anda bisa langsung memastikan hasilnya pasti desimal/bukan bulat tanpa perlu mencoba metode memisahkan dua digit.</p>
 
- = 
+        <p><strong>Kenapa?</strong><br>
+           Karena tidak ada bilangan yang jika dikuadratkan angka satuannya adalah angka tersebut:</p>
 
-Karena 
- < 
-
-Maka hasilnya pasti “ 
- ”
-
-Cara Kedua cek satu-satu:
-
- = 
- = 
-Maka jawabannya:
-
- = 
-
-
-
-
-
-
-
-
-
-
-
-
-Syarat Wajib & Cara Cek Apakah Hasil Akar Berupa Bilangan Bulat
-Trik di atas terasa sangat cepat dan mudah, bukan? Namun, perlu diingat bahwa cara ini khusus berlaku untuk kuadrat sempurna (hasil akar berupa bilangan bulat). Yuk, kita bahas cara mengetahui apakah suatu angka memiliki hasil bulat atau tidak!
-
-I. Cek Cepat dari Digit Terakhir (Filter Pertama)
-​Suatu bilangan bulat pasti bukan kuadrat sempurna jika angka terakhirnya adalah:
-
-, 
-, 
-, dan 
-
-Jika bilangan berakhiran salah satu dari empat angka di atas (misal 
- atau 
-), Anda bisa langsung memastikan hasilnya pasti desimal/bukan bulat tanpa perlu mencoba metode trik tersebut.
-
-Kenapa? 
-
-Karena tidak ada bilangan yang jika dikuadratkan angka satuannya adalah angka tersebut:
-
+        \[
+        \begin{align*}
+        1^2 &amp;= \mathbf{1}\\
+        2^2 &amp;= \mathbf{4}\\
+        3^2 &amp;= \mathbf{9}\\
+        4^2 &amp;= 1\mathbf{6}\\
+        5^2 &amp;= 2\mathbf{5}\\
+        6^2 &amp;= 3\mathbf{6}\\
+        7^2 &amp;= 4\mathbf{9}\\
+        8^2 &amp;= 6\mathbf{4}\\
+        9^2 &amp;= 8\mathbf{1}\\
+        \end{align*}
+        \]
  
-II. Gunakan Uji "Digital Root" (Jumlahkan Semua Digit)
-Digital root adalah penjumlahan terus-menerus semua angka dalam bilangan sampai tersisa 1 digit.
+        <p><strong>II. Gunakan Uji "Digital Root" (Jumlahkan Semua Digit)</strong></p>
 
-​Kuadrat sempurna hanya boleh memiliki digital root bernilai 
-, 
-, 
-, atau 
-.
+        <p>Digital root adalah penjumlahan terus-menerus semua angka dalam bilangan sampai tersisa 1 digit.</p>
 
-​Contoh 1 
- 
- + 
- + 
- + 
- = 
- + 
- = 
- (Lolos uji, berpotensi kuadrat sempurna).
+        <p>Kuadrat sempurna hanya boleh memiliki digital root bernilai </p>
+
+        <p><strong>Contoh 1: Tentukan nilai dari</strong> \(\mathbf{\sqrt{1296}}\)</p>
+
+        \[\sqrt{1296} = 1 + 2 + 9 + 6 = 18 \rightarrow 1 + 8 = \mathbf{9}\]
+
+        <p>Lolos uji, berpotensi</p>
 ​Contoh 2 
  
  + 
@@ -280,6 +282,8 @@ Misal dari trik diperoleh dugaan akar
  (tidak ada yang menghasilkan 
 ). Dari sini Anda tahu 
  bernilai desimal.
+      </section>
+      
 2. Pohon Faktor
 Selain digunakan dalam operasi KPK (Kelipatan Persekutuan Terkecil) maupun FPB (Faktor Persekutuan Terbesar). Pohon faktor pun dapat digunakan untuk menemukan nilai akar, bahkan untuk akar yang hasilnya tidak bulat.
 

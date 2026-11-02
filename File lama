@@ -1,0 +1,181 @@
+<style>
+  /* Menjangkau elemen teks umum */
+  p, li, h1, h2, h3, h4, span {
+    color: #000000 !important;
+  }
+
+  /* Menjangkau formula matematika (MathJax / KaTeX) */
+  .mjx-chtml, .MathJax, .katex, .katex * {
+    color: #000000 !important;
+  }
+  
+  p, ul, ol, li, div {
+    text-align: left !important;
+  }
+</style>
+
+<p style="text-align: justify;">Bagi sebagian besar orang, operasi akar \(\sqrt{x}\) sering menjadi materi matematika yang paling dihindari. Di tingkat dasar hingga menengah, materi ini dianggap jauh lebih rumit dibandingkan perkalian, pembagian, pecahan, maupun desimal.</p>
+
+<p style="font-family: Poppins, sans-serif;"><b>Kenapa?&nbsp;&nbsp;</b><span style="text-align: justify;">Beberapa alasan diantaranya</span></p>
+<p style="font-family: Poppins, sans-serif;"></p><p></p><ul style="font-family: Poppins, sans-serif; text-align: left;"><li>
+
+​<b>Konsep Operasi "Terbalik" dan Abstrak</b></li></ul><p></p><ul style="font-family: Poppins, sans-serif; text-align: left;">
+<p></p><ul><li style="text-align: justify;">​Perkalian dan pembagian relatif konkret karena berbasis penjumlahan atau pengelompokan berulang.</li></ul><ul><li style="text-align: justify;">​Akar menuntut pola pikir kebalikannya: “<i>mencari angka asal yang jika dikalikan dirinya sendiri menghasilkan angka di dalam akar”</i>. Hal ini memerlukan pemahaman konsep abstraksi yang lebih tinggi.</li></ul><p></p></ul><p></p><p></p>
+
+<p></p><ul style="font-family: Poppins, sans-serif; text-align: left;"><li>
+​<b>Kehadiran Angka Irrasional</b></li></ul><p></p><p></p><p></p><ul style="font-family: Poppins, sans-serif; text-align: left;">
+<p></p><ul><li style="text-align: justify;">​Pecahan dan desimal biasa umumnya menghasilkan nilai yang pasti atau berulang (misal \(\frac{1}{2}\) = 0,5).</li></ul><ul>
+<li style="text-align: justify;">​Sebagian besar operasi akar (seperti \(\sqrt{2}\) atau \( \sqrt{3})\) menghasilkan bilangan irrasional dengan desimal tak terhingga dan tak berpola. Ketiadaan "jawaban bulat" ini sering membuat pembelajar merasa tidak pasti.</li></ul><p></p></ul>
+
+<ul style="font-family: Poppins, sans-serif; text-align: left;">
+<li>​<b>Aturan Manipulasi Simbolis yang Ketat</b></li><p></p><ul>
+<li style="text-align: justify;">​Operasi penyederhanaan (seperti \(\sqrt{18}\) = \(3\sqrt{2}\) atau merasionalkan penyebut \(\frac{1}{\sqrt{2}}\) = \(\frac{\sqrt{2}}{2}\)&nbsp; membutuhkan manipulasi aljabar yang menggabungkan konsep faktorisasi dan eksponen.</li></ul><p></p></ul><p></p><ul style="font-family: Poppins, sans-serif; text-align: left;"><li><span style="text-align: justify;">​</span><b style="text-align: justify;">Beban Kognitif Tambahan</b></li></ul><p></p><ul style="font-family: Poppins, sans-serif; text-align: left;">
+<ul><li style="text-align: justify;">Tidak seperti perkalian atau pembagian yang memiliki algoritma hitung baku di kertas (seperti perkalian bersusun atau <i>porogapit</i>), perhitungan nilai akurat akar non-kuadrat sempurna hampir selalu membutuhkan estimasi khusus, tabel, atau kalkulator.</li></ul></ul>
+
+<p style="font-family: Poppins, sans-serif;"></p><p style="font-family: Poppins, sans-serif;"></p><span face="Poppins, sans-serif"><p style="text-align: justify;"><span face="Poppins, sans-serif">Pada kali ini</span><span face="Poppins, sans-serif">, saya akan memberikan beberapa trik untuk mencari nilai dari akar yang mudah cepat dan efektif.&nbsp;</span></p><div style="text-align: justify;"><span face="Poppins, sans-serif">Mencari nilai akar seperti \(\sqrt{4}\), \( \sqrt{9}\), atau \(\sqrt{16}\) mungkin mudah, kita hanya tinggal mencari angka yang jika dikuadratkan akan menghasilkan angka tersebut.&nbsp;</span></div></span><p style="font-family: Poppins, sans-serif;"></p>
+
+<p style="font-family: Poppins, sans-serif; text-align: justify;">Beberapa dari kita mungkin masih menggunakan cara lama dan paling sederhana yaitu mengalikan angka kuadrat sampai menemukan angka yang sesuai seperti:</p>
+
+\[
+\begin{align*}
+2 \: \textnormal{×} \: 2 &amp;= 4 \\ 
+3 \: × \: 3 &amp;= 9 \\
+4 \: × \: 4 &amp;= 16
+\end{align*}
+\]
+
+<p style="font-family: Poppins, sans-serif;"></p><p style="font-family: Poppins, sans-serif; text-align: justify;">Tapi bagaimana jika angkanya besar? Seperti \(\sqrt{484}\) atau \(\sqrt{729}\) Atau bahkan angkanya tidak bulat seperti \(\sqrt{18}\) atau \(\sqrt{24}\)</p><p style="font-family: Poppins, sans-serif; text-align: justify;">Apa akan efektif menggunakan cara lama seperti itu? Berapa lama yang dibutuhkan? Dan apa akan benar-benar menemukan jawabannya?&nbsp;</p><p style="font-family: Poppins, sans-serif;"></p><p style="font-family: Poppins, sans-serif; text-align: justify;">Cara lama itu tidak akan bisa diandalkan, apalagi jika kita sedang melaksanakan ujian atau diminta untuk mencari nilai dengan waktu yang terbatas.&nbsp;</p><p style="font-family: Poppins, sans-serif; text-align: justify;"><b>Lalu bagaimana cara yang lebih cepat, efektif, dan akurat?&nbsp;</b></p><p style="font-family: Poppins, sans-serif; text-align: justify;">Berikut adalah beberapa cara yang bisa kita coba untuk mencari nilai akar dengan lebih baik:</p>
+
+<div style="background: rgb(255, 255, 255); border-radius: 10px; border: 2px dashed rgb(203, 213, 225); font-family: Poppins, sans-serif; margin: 20px 0px; padding: 16px 20px;">
+  <h4 style="align-items: center; color: #0f172a; display: flex; font-size: 16px; gap: 8px; margin: 0px 0px 10px;">
+    📝 Materi yang Dibahas:
+  </h4>
+  <ol style="color: #475569; font-size: 14px; line-height: 1.8; margin: 0px; padding-left: 20px;">
+    <li><a href="#pisah-digit" style="color: #0284c7; font-weight: 500; text-decoration: none;">Trik Pisahkan Dua Digit</a></li>
+    <li><a href="#pohon-faktor" style="color: #0284c7; font-weight: 500; text-decoration: none;">Pohon Faktor</a></li>
+    <li><a href="#estimasi" style="color: #0284c7; font-weight: 500; text-decoration: none;">Estimasi Nilai Desimal Akar</a></li>
+  </ol>
+</div>
+
+<!--KODE TOMBOL BACK TO TOP KHUSUS ARTIKEL INI-->
+<button id="backToTopBtn" onclick="scrollToTop()" style="background-color: #e84a43; border-color: currentcolor; border-image: none; border-radius: 50%; border-style: none; border-width: medium; border: none; bottom: 20px; box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px; color: white; cursor: pointer; display: none; font-size: 16px; outline: none; padding: 12px 16px; position: fixed; right: 20px; transition: background 0.3s; z-index: 999;" title="Kembali ke atas">
+  ▲
+</button>
+
+<script>
+  let mybutton = document.getElementById("backToTopBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  };
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<!--- 1. Pisah-Digit --->
+
+<p style="font-family: Poppins, sans-serif;"></p><h2 id="pisah-digit" style="border-left: 5px solid rgb(2, 132, 199); color: #0f172a; font-family: Poppins, sans-serif; font-weight: 700; margin-top: 30px; padding-left: 12px; text-align: justify;">1. Trik Pisahkan Dua Digit</h2><p style="font-family: Poppins, sans-serif; text-align: justify;">Trik yang satu ini cukup sederhana, kita hanya perlu membagi akar kuadrat menjadi dua bagian, dengan garis tengah nya adalah di depan dua Digit terakhir, lalu mencari angka kuadrat yang mendekati masing-masing dari dua bagian tersebut.</p>
+
+<div style="background-color: #f0f7ff; border-left: 5px solid rgb(0, 102, 204); border-radius: 4px; font-family: Poppins, sans-serif; margin: 15px 0px; padding: 15px;"><strong style="color: #0066cc;"> CATATAN PENTING:</strong>
+  <p style="color: #333333; margin-bottom: 0px; margin-top: 5px; text-align: justify;">
+    Rumus ini hanya bisa digunakan jika hasil akarnya berupa bilangan bulat (kuadrat sempurna). Bagaimana cara kita tahu hasil dari nilai akar yang kita cari bulat atau tidak? Akan kita bahas <a href="#syarat">di bawah!&nbsp;</a></p></div>
+
+<p style="font-family: Poppins, sans-serif;"><b>Contoh 1 : \(\sqrt{729}\)</b></p>
+
+<p style="font-family: Poppins, sans-serif; text-align: justify;">Bagi menjadi dua bagian dengan garis tengah di dua Digit terakhir:</p><p style="font-family: Poppins, sans-serif;">= \(\sqrt{729}\)<br />= \(7 | 29\)</p><p style="font-family: Poppins, sans-serif; text-align: justify;"><b>a. Menentukan Puluhan (Bagian Depan):</b></p><div style="font-family: Poppins, sans-serif;"><p style="text-align: justify;">Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 7 tanpa melebihi 7 :</p></div><p style="font-family: Poppins, sans-serif; text-align: justify;">\(2^2\) = \(4\)</p><p style="font-family: Poppins, sans-serif; text-align: justify;">Maka ditemukan hasil puluhannya =&nbsp;<b>\(2\)</b></p><div style="font-family: Poppins, sans-serif;"><p style="text-align: justify;"><b>b. Menentukan Satuan (Bagian Belakang):</b></p><p style="text-align: justify;">Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 9</p></div><p style="font-family: Poppins, sans-serif; text-align: justify;">\(3^2\) = \(9\)<br />\(7^2\) = \(49\)</p><p style="font-family: Poppins, sans-serif; text-align: justify;">Maka jawabannya antara 23 atau 27</p>
+
+<p style="font-family: Poppins, sans-serif; text-align: justify;">Ada dua cara untuk menentukannya:</p><p style="font-family: Poppins, sans-serif; text-align: justify;"><b>Cara Pertama kita bisa ambil angka tengah dari keduanya:</b></p><p style="font-family: Poppins, sans-serif;">\(25^2\) = \(625\)</p><p style="font-family: Poppins, sans-serif;"></p><p style="text-align: left;"></p><div style="text-align: justify;">Karena \(625\) &lt; \(729\)</div><div style="text-align: justify;">Maka hasilnya pasti “ \(27\) ”</div><p></p><p style="font-family: Poppins, sans-serif;"></p><p style="font-family: Poppins, sans-serif; text-align: justify;"><b>Cara Kedua kita bisa cek satu-satu agar lebih pasti:</b></p><p style="font-family: Poppins, sans-serif;"></p><div style="text-align: justify;">\(23^2\) = \(529\)</div><div style="text-align: justify;">\(27^2\) = \(729\)</div><p></p><p style="font-family: Poppins, sans-serif;"></p><p style="font-family: Poppins, sans-serif; text-align: justify;"><b>Maka jawabannya:<br /></b>\(\sqrt{729}\) = \(27\)</p>
+
+<p style="font-family: Poppins, sans-serif;"></p><p style="clear: both; font-family: Poppins, sans-serif; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtoFSKBZHvByvIe49kLYczg2A6mza98X9KwB1_Rs9ne_84Bn_aQQiza2y-0Sq9dfkdp-9uM-sf9ugXxwSk1jUSdj_svLAzC2vW6Q4nVO-n7bh8g1t2OpO97Svd761JMD-4b1daLhd9-45NFVAl59lY1-BVj_n7BQPrzwKdYAOgrInE4W8k7qY_SW5OrmDq/s1408/1786024241906.png" style="clear: left; float: left; margin-bottom: 1em; margin-left: 1em;"><img border="0" data-original-height="768" data-original-width="1408" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjtoFSKBZHvByvIe49kLYczg2A6mza98X9KwB1_Rs9ne_84Bn_aQQiza2y-0Sq9dfkdp-9uM-sf9ugXxwSk1jUSdj_svLAzC2vW6Q4nVO-n7bh8g1t2OpO97Svd761JMD-4b1daLhd9-45NFVAl59lY1-BVj_n7BQPrzwKdYAOgrInE4W8k7qY_SW5OrmDq/s1600/1786024241906.png" /></a></p><p style="font-family: Poppins, sans-serif; text-align: justify;">
+      
+<b>Contoh 2 : \(\sqrt{3364}\)</b></p><p style="font-family: Poppins, sans-serif; text-align: justify;">Bagi menjadi dua bagian dengan patokan garis tengahnya adalah Dua Digit terakhir:</p><p style="font-family: Poppins, sans-serif;"></p><div style="font-family: Poppins, sans-serif; text-align: justify;">= \(\sqrt{3364}\)</div><div style="font-family: Poppins, sans-serif; text-align: justify;">= \(33 | 64\)</div><p style="font-family: Poppins, sans-serif;"></p><div style="font-family: Poppins, sans-serif;"><p style="text-align: justify;"><b>a. Menentukan Puluhan (Bagian Depan):</b></p><div><p style="text-align: justify;">Cari bilangan bulat yang jika dikuadratkan hasilnya paling mendekati 33 tanpa melebihi 33:</p></div><p style="text-align: justify;">\(5^2\) = \(25\)</p><p style="text-align: justify;">Maka ditemukan hasil puluhannya = \(\mathbf{5}\)</p><div><p style="text-align: justify;"><b>b. Menentukan Satuan (Bagian Belakang):</b></p><p style="text-align: justify;">Cari bilangan yang jika dikuadratkan menghasilkan angka satuan 4 :</p></div><p style="text-align: justify;">\(2^2\) = \(4\)<br />\(8^2\) = \(64\)</p><p style="text-align: justify;">Maka jawabannya antara 52 atau 58</p>
+ 
+<p style="text-align: justify;">Ingat ada dua cara untuk menentukannya:</p><p style="text-align: justify;"><b>Cara Pertama kita bisa ambil angka tengah dari keduanya:</b></p><p style="text-align: justify;">\(55^2\) = \(3025\)</p><p style="text-align: justify;">Karena \(3025\) &lt; \(3364\)<br />Maka hasilnya pasti “ \(58\) ”</p><p style="text-align: justify;"><b>Cara Kedua cek satu-satu:</b></p><div style="text-align: justify;">\(52^2\) = \(2704\)</div><div style="text-align: justify;">\(58^2\) = \(3364\)</div><p style="text-align: justify;"><b>Maka jawabannya:</b></p><p style="text-align: justify;">\(\sqrt{3364}\) = \(58\)</p></div>
+
+<p style="clear: both; font-family: Poppins, sans-serif; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz2eOJj5OCmpIV-ZXWAtiMwKnsqdzeOMSoolN8LDdiJhU5Vs7m8m_S2WGqibp-DyAaJ-reSXwyoF0Ey59Unj5-4cfkLdM0p7Yf5JF0nZHUqyBCGWcPPGJ82-2slQ6AygqIwSvqqtNh4Ai6xyRP2U9fPylVdwxJSX0da3oVQrjtudfJo-fCP2ilHqwTXfjU/s1069/1786114033537.png" style="clear: left; float: left; margin-bottom: 1em; margin-left: 1em;"><img border="0" data-original-height="992" data-original-width="1069" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhz2eOJj5OCmpIV-ZXWAtiMwKnsqdzeOMSoolN8LDdiJhU5Vs7m8m_S2WGqibp-DyAaJ-reSXwyoF0Ey59Unj5-4cfkLdM0p7Yf5JF0nZHUqyBCGWcPPGJ82-2slQ6AygqIwSvqqtNh4Ai6xyRP2U9fPylVdwxJSX0da3oVQrjtudfJo-fCP2ilHqwTXfjU/s1600/1786114033537.png" /></a></p>
+
+<p style="font-family: Poppins, sans-serif; text-align: justify;"><br /><br /></p><p style="font-family: Poppins, sans-serif; text-align: justify;"><br /></p><p style="font-family: Poppins, sans-serif; text-align: justify;"><br /></p><p style="font-family: Poppins, sans-serif; text-align: justify;"><br /></p>
+
+<h3 id="syarat" style="background-color: #f1f5f9; border-left: 4px solid rgb(59, 130, 246); border-radius: 6px; clear: both; color: black; font-family: Poppins, sans-serif; font-weight: 700; margin-top: 30px; padding: 10px 14px; text-align: justify;"><b style="text-align: left;">Syarat Wajib &amp; Cara Cek Apakah Hasil Akar Berupa Bilangan Bulat</b></h3>
+
+<p style="font-family: Poppins, sans-serif; text-align: justify;">Trik di atas terasa sangat cepat dan mudah, bukan? Namun, perlu diingat bahwa cara ini khusus berlaku untuk <b>kuadrat sempurna (hasil akar berupa bilangan bulat)</b>. Yuk, kita bahas cara mengetahui apakah suatu angka memiliki hasil bulat atau tidak!</p><div style="font-family: Poppins, sans-serif;">
+  
+<h4 style="text-align: justify;">I. Cek Cepat dari Digit Terakhir (Filter Pertama)</h4><p style="text-align: justify;">​Suatu bilangan bulat <b>pasti bukan</b> kuadrat sempurna jika angka terakhirnya adalah:</p><p style="text-align: center;">\(\mathbf{2}\), \(\mathbf{3}\), \(\mathbf{7}\), dan \(\mathbf{8}\)</p><p style="text-align: justify;">Jika bilangan berakhiran salah satu dari empat angka di atas (misal \(\sqrt{1357}\) atau \(\sqrt{482}\)), Anda bisa langsung memastikan hasilnya pasti desimal/bukan bulat tanpa perlu mencoba metode trik tersebut.</p><p><b>Kenapa?&nbsp;</b></p><p style="text-align: justify;">Karena tidak ada bilangan yang jika dikuadratkan angka satuannya adalah angka tersebut:</p>
+
+\[
+\begin{align*}
+1^2 &amp;\text{ = } \mathbf{1} \\
+2^2 &amp;\text{ = } \mathbf{4} \\
+3^2 &amp;\text{ = } \mathbf{9} \\
+4^2 &amp;\text{ = } 1\mathbf{6} \\
+5^2 &amp;\text{ = } 2\mathbf{5} \\
+6^2 &amp;\text{ = } 3\mathbf{6} \\
+7^2 &amp;\text{ = } 4\mathbf{9} \\
+8^2 &amp;\text{ = } 6\mathbf{4} \\
+9^2 &amp;\text{ = } 8\mathbf{1} \\
+10^2 &amp;\text{ = } 10\mathbf{0}
+\end{align*}
+\]
+  
+<h4 style="text-align: justify;">II. Gunakan Uji "Digital Root" (Jumlahkan Semua Digit)</h4><div><p dir="ltr" style="text-align: justify;"><i>Digital root</i> adalah penjumlahan terus-menerus semua angka dalam bilangan sampai tersisa 1 digit.</p>
+<p dir="ltr" style="text-align: justify;">​Kuadrat sempurna hanya boleh memiliki <i>digital root</i> bernilai \(\mathbf{1}\), \(\mathbf{4}\), \(\mathbf{7}\), atau \(\mathbf{9}\).</p><p></p>
+  
+<ul style="text-align: left;"><li style="text-align: justify;">​<b>Contoh 1 </b><b>\(\sqrt{1296} :\)&nbsp;</b><b></b>\(1\) + \(2\) + \(9\) + \(6\) = \( \mathbf{18} \rightarrow 1\) + \(8\) = \(\mathbf{9}\) <i>(Lolos uji, berpotensi kuadrat sempurna)</i>.</li></ul><p></p><p></p>
+  
+<ul style="text-align: left;"><li style="text-align: justify;">​<b>Contoh 2 </b> \(\sqrt{1290}:\)
+ \(1\) + \(2\) + \(9\) + \(0\) = \(\mathbf{12} \rightarrow 1\) + \(2\) = \(\mathbf{3}\) (Bukan \(1\), \( 4\), \( 7\), atau \(9\). Pasti BUKAN kuadrat sempurna).</li></ul><div></div><p></p>
+  
+<p style="text-align: justify;"><b>Catatan:</b> Jika <i>digital root</i>-nya bukan \(1\), \(4\), \(7\), atau \(9\), angka tersebut <b>pasti bukan</b> kuadrat sempurna. Namun jika hasilnya \(1),( 4\), \(7\), atau \(9\), itu <i>kemungkinan besar</i> kuadrat sempurna (meski ada beberapa kasus pengecualian).</p><h4 style="text-align: justify;">III. Cek Ulang dengan Kuadratkan Kembali (Verifikasi Mutlak)</h4><p dir="ltr" style="text-align: justify;">Karena trik pemisahan 2 digit sangat cepat (hanya butuh 3–5 detik), cara memastikannya adalah dengan <b>mengkuadratkan balik</b> hasil kandidat yang diperoleh.</p>
+
+<p></p><p></p><p></p><p></p><ul style="text-align: left;"><li style="text-align: justify;">Misal dari trik diperoleh dugaan akar \(\sqrt{1296}\) adalah \(36\).</li></ul><p></p><p></p><p></p><p></p><p></p><p></p><ul style="text-align: left;"><li style="text-align: justify;">​Lakukan perkalian cepat \(36\) × \(36\) = \(1296\). Karena tepat sama, maka akarnya memang bernilai bulat.</li></ul><p></p><p></p><p></p><p></p><ul style="text-align: left;"><li style="text-align: justify;">​Jika yang diuji adalah \(\sqrt{1290}\), trik akan mengarahkan ke angka \(34\) atau \(36\). Tapi \(34^2\) = \(1156\) dan \(36^2\) = \(1296\) (tidak ada yang menghasilkan \(1290\)). Dari sini Anda tahu \(\sqrt{1290}\) bernilai desimal.</li></ul>
+  
+<!--- 2. Pohon-faktor --->
+  
+<h2 id="pohon-faktor" style="border-left: 5px solid rgb(2, 132, 199); color: #0f172a; font-weight: 700; margin-top: 30px; padding-left: 12px; text-align: justify;">2. Pohon Faktor</h2>
+  
+<p style="text-align: justify;">Selain digunakan dalam operasi&nbsp;KPK (Kelipatan Persekutuan Terkecil) maupun FPB (Faktor Persekutuan Terbesar). Pohon faktor pun dapat digunakan untuk menemukan nilai akar, bahkan untuk akar yang hasilnya tidak bulat.</p>
+  
+<p style="text-align: justify;">Konsepnya sebenarnya sangat sederhana, yaitu kita akan memecah bilangan besar menjadi beberapa bilangan kecil agar lebih mudah mencari nilai dari sebuah akar :</p>
+  
+<p style="text-align: center;">\(\sqrt{ab}\) = \(\sqrt{a&nbsp; \times&nbsp; b}\)</p>
+  
+<p dir="ltr"><b>Contoh:</b> Sederhanakan \(\sqrt{128}\)&nbsp;</p><p dir="ltr">I.&nbsp;Buat <b>pohon faktor</b> untuk mencari faktorisasi primanya, yaitu membagi 128 terus-menerus dengan bilangan prima terkecil:</p><p dir="ltr">\(128\) = \(2\) × \(2\) × \(2\) × \(2\) × \(2\) × \(2\) × \(2\) × \(1\)&nbsp;</p><p dir="ltr">II.&nbsp;<b>​</b>Kelompokkan angka yang sama<b> berpasangan (dua-dua):</b>&nbsp;</p><p dir="ltr">\(128\) = \((2 \) × \(2)\) × \((2\) × \(2)\) × \((2\) × \(2)\) × \(2\) × \(1\)&nbsp;</p><p dir="ltr">III.&nbsp;<b>Kalikan </b>hasil dari<b> </b>setiap kelompok<b> </b>dan<b> pisahkan </b>antara<b> </b>hasil<b> </b>kelompok bilangan kembar<b> </b>dengan<b> </b>yang tidak kembar:&nbsp;</p><p style="text-align: left;">\(128\) = \((4\) × \(4\) × \(4)\) × \((2\) × \(1)\)<br />\(128\) = \(64\) × \(2\)&nbsp;</p><p dir="ltr">IV.&nbsp;<b>Substitusikan </b>ke akar<b>:</b>&nbsp;</p><p dir="ltr">\(\sqrt{128}\) = \(\sqrt{64 \times 2}\)&nbsp;</p><p dir="ltr">V. Cari hasil akar nya<b>:</b></p><p style="text-align: left;">\(\sqrt{64}\) = \(8\) × \(8\)&nbsp;<br />\(\sqrt{2}\) = Tidak ada, maka tetap dalam bentuk akar \((\sqrt{2})\)&nbsp;</p><p dir="ltr">Maka didapatkan<b> hasilnya :</b></p><p dir="ltr">\(\sqrt{128}\) = \(8\sqrt{2}\)&nbsp;</p>
+  
+<div class="separator" style="clear: both; text-align: center;"><a href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDs8xgb181N0KzKQhprM19dUOhCKVqR0iWyWgFBkMqnrI2KshuXtqK_xzw-G1WzapNtqHXlfthAmcSZbnrICLMKqezLvIOz2Rs5GLYng1ZM1_zue-ywWaaSuj0eH5tdflR2PHCld3lOAbnbmEcIDY_6Iw48QNqC3FyTe6mmFSsggln382JNWCtQ4Gx2MML/s1103/1787559825718.png" style="margin-left: 1em; margin-right: 1em;"><img border="0" data-original-height="960" data-original-width="1103" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDs8xgb181N0KzKQhprM19dUOhCKVqR0iWyWgFBkMqnrI2KshuXtqK_xzw-G1WzapNtqHXlfthAmcSZbnrICLMKqezLvIOz2Rs5GLYng1ZM1_zue-ywWaaSuj0eH5tdflR2PHCld3lOAbnbmEcIDY_6Iw48QNqC3FyTe6mmFSsggln382JNWCtQ4Gx2MML/s1600/1787559825718.png" /></a></div><br /><div style="text-align: left;"><br />
+  
+<p style="text-align: justify;"><b>Contoh : </b>Sederhanakan \(\sqrt{243}\)&nbsp;</p><p style="text-align: justify;"><span style="text-align: left;">I. Buat </span><b style="text-align: left;">pohon faktor</b><span style="text-align: left;"> untuk mencari faktorisasi primanya, yaitu membagi \(243\) terus-menerus dengan bilangan prima terkecil:</span></p><p style="text-align: justify;">\(243\) = \(3\) × \(3\) × \(3\) × \(3\) × \(3\)</p><p style="text-align: justify;">II. Kelompokkan angka yang sama <b>berpasangan (dua-dua) :&nbsp;</b></p><p style="text-align: justify;">\(243\) = \((3 \) × \(3)\) × \((3\) × \(3)\) × \(3\)</p><p style="text-align: justify;">III.&nbsp;<b>Ambil satu angka </b>dari setiap kelompok angka yang<b> kembar lalu kalikan </b>satu sama lain<b>&nbsp;</b>:</p><p style="text-align: justify;">\(243\) = (\(\color {#e41b17}{3}\) × \(3) \) × (\(\color {#e41b17}{3}\)× \(3) \) × \(3\)&nbsp;<br />\(243\) = (\(\color {#e41b17}{3}\) × \(\color {#e41b17}{3}\)) × \(3\)&nbsp;<br />\(243\) = \(9\) × \(3\)&nbsp;</p><p style="text-align: justify;">IV.&nbsp;Angka<b> </b>hasil dari perkalian <b>angka kembar</b> ditaruh <b>di luar akar</b> (karena angka itu sudah pasti bisa dikuadratkan, sementara angka hasil perkalian dari angka yang <b>tidak memiliki pasangan</b> akan tetap <b>di dalam akar</b> :</p><p style="text-align: justify;">\(\sqrt{243}\) = \(9\sqrt{3}\)&nbsp;</p><p style="text-align: justify;"><br /></p>
+  
+<!--- 3. Estimasi --->
+  
+<h2 id="estimasi" style="border-left: 5px solid rgb(2, 132, 199); color: #0f172a; font-weight: 700; margin-top: 30px; padding-left: 12px; text-align: justify;">3. Estimasi Nilai Desimal Akar</h2><p style="text-align: justify;">Di metode terakhir ini kita akan menebak nilai angka yang sulit \((x)\) dengan bantuan bilangan kuadrat sempurna terdekat \((s)\).&nbsp;</p><p style="text-align: justify;">Berbeda dengan cara sebelumnya yang menghasilkan bentuk eksak a\sqrt{b}, metode ini digunakan untuk mencari estimasi nilai desimalnya.</p>
+
+<div><b>Rumusnya:</b></div><div><br /></div><div style="text-align: center;">\(\mathbf{\sqrt{x}}\) ≈ \(\mathbf{\sqrt{s}}\) + \(\mathbf{\frac{x - s}{2 \sqrt{s}}}\)</div><div style="text-align: justify;"><br /></div><div style="text-align: justify;">\(s\) = Nilai akar terdekat</div><div style="text-align: justify;">\(x\) = Nilai akar yang dicari</div><div style="text-align: center;"><br /></div><p style="text-align: justify;"><b>Contoh: </b>Tentukan Nilai dari \(\sqrt{80}\)&nbsp;</p><p style="text-align: justify;">Cari<b> nilai akar </b>terdekatnya<b>:</b><br />\(\sqrt{81}\) = \(9\)&nbsp;</p>
+
+<p style="text-align: justify;"><b>Substitusikan </b>ke dalam rumus:</p>
+
+\[
+  \begin{align*}
+  \sqrt{80} &amp;≈ \sqrt{81} + \frac{80 - 81}{2 \sqrt{80}} \\
+  \sqrt{80} &amp;≈ 9 + \frac{-1}{18} \\
+  \sqrt{80} &amp;≈ 9 - 0,555 \\
+  \sqrt{80} &amp;≈ 8,945
+  \end{align*}
+\]
+  
+
+<div style="background-color: #f0f7ff; border-left: 5px solid rgb(0, 102, 204); border-radius: 4px; font-family: Poppins, sans-serif; margin: 15px 0px; padding: 15px;"><strong style="color: #0066cc;"> CATATAN PENTING:</strong>
+  <p style="color: #333333; margin-bottom: 0px; margin-top: 5px; text-align: justify;">
+Tanda (≈) mendekati (approximately equals) memiliki arti bahwa nilai di kiri dan kanan tidak persis sama, tetapi sangat dekat. Tanda ini digunakan untuk nilai estimasi, pembulatan desimal, atau hasil pengoperasian angka irasional.&nbsp;</p></div>
+  
+<h2 id="pisah-digit" style="border-left: 5px solid rgb(2, 132, 199); color: #0f172a; font-family: Poppins, sans-serif; font-weight: 700; margin-top: 30px; padding-left: 12px; text-align: justify;">Penutup</h2>  
+  
+  <p style="text-align: justify;">Itulah beberapa cara praktis untuk mencari nilai akar. Melalui pemahaman metode ini dan latihan rutin, materi akar tidak akan lagi terasa sulit.</p><p style="text-align: justify;">Yang terpenting bukanlah seberapa berbakat kita, melainkan seberapa konsisten kita mau mencoba.</p></div></div></div>

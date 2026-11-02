@@ -235,225 +235,220 @@ Maka ditemukan hasil puluhannya = \(50\)</p>
 
         <p>Kuadrat sempurna hanya boleh memiliki digital root bernilai </p>
 
-        <p><strong>Contoh 1: Tentukan nilai dari</strong> \(\mathbf{\sqrt{1296}}\)</p>
-
-        \[\sqrt{1296} = 1 + 2 + 9 + 6 = 18 \rightarrow 1 + 8 = \mathbf{9}\]
-
-        <p>Lolos uji, berpotensi</p>
-​Contoh 2 
+        <ul>
+          <li><strong>Contoh 1:</strong> \(\mathbf{\sqrt{1296}} \rightarrow 1 + 2 + 9 + 6 = 18 \rightarrow 1 + 8 = \mathbf{9}\)<br><em>(Lolos uji, berpotensi kuadrat sempurna. ) </em></li>
+          <li><strong>Contoh 2:</strong> \(\mathbf{\sqrt{1290}} \rightarrow 1 + 2 + 9 + 0 = 12 \rightarrow 1 + 2 = \mathbf{3}\)<br><em>(Karena bukan salah satu angka dari \(\mathit{1, 4, 7,}\) atau \(\mathit{9}\), pasti bukan kuadrat sempurna.)</em></li>
+        </ul>
  
- + 
- + 
- + 
- = 
- + 
- = 
- (Bukan 
-, 
-, 
-, atau 
-. Pasti BUKAN kuadrat sempurna).
-Catatan: Jika digital root-nya bukan 
-, 
-, 
-, atau 
-, angka tersebut pasti bukan kuadrat sempurna. Namun jika hasilnya 
-, 
-, atau 
-, itu kemungkinan besar kuadrat sempurna (meski ada beberapa kasus pengecualian).
+        <p><strong>III. Cek Ulang dengan Kuadratkan Kembali (Verifikasi Mutlak)</strong><br>Karena trik pemisahan 2 digit sangat cepat (hanya butuh 3–5 detik), cara memastikannya adalah dengan <strong>mengkuadratkan kembali</strong> hasil kandidat yang diperoleh.</p>
 
-III. Cek Ulang dengan Kuadratkan Kembali (Verifikasi Mutlak)
-Karena trik pemisahan 2 digit sangat cepat (hanya butuh 3–5 detik), cara memastikannya adalah dengan mengkuadratkan balik hasil kandidat yang diperoleh.
-
-Misal dari trik diperoleh dugaan akar 
- adalah 
-.
-​Lakukan perkalian cepat 
- × 
- = 
-. Karena tepat sama, maka akarnya memang bernilai bulat.
-​Jika yang diuji adalah 
-, trik akan mengarahkan ke angka 
- atau 
-. Tapi 
- = 
- dan 
- = 
- (tidak ada yang menghasilkan 
-). Dari sini Anda tahu 
- bernilai desimal.
+        <ul>
+          <li>Misal dari trik diperoleh dugaan dari akar \(\sqrt{1296} \text{ adalah } 36\).<br>Lakukan perkalian cepat \(36 \times 36 = 1296\) (terbukti akarnya bernilai bulat).</li>
+          <li>Jika yang diuji adalah \(\sqrt{1290}\)<br>Trik ini akan mengarahkan kita ke angka \(34 \text{ dan } 36\), tapi nilai dari \(34^2 = 1156\) dan \(36^2 = 1296\) (tidak ada yang menghasilkan nilai \(1290\).<br>Dari sini kita tahu bahwa \(\sqrt{1290\) bernilai desimal.</li>
+        </ul>  
       </section>
       
-2. Pohon Faktor
-Selain digunakan dalam operasi KPK (Kelipatan Persekutuan Terkecil) maupun FPB (Faktor Persekutuan Terbesar). Pohon faktor pun dapat digunakan untuk menemukan nilai akar, bahkan untuk akar yang hasilnya tidak bulat.
+      <section id="pohon_faktor">
+        <h2 class="judul_Materi">2. Pohon Faktor</h2>
+        
+        <p>Selain digunakan dalam operasi KPK (Kelipatan Persekutuan Terkecil) maupun FPB (Faktor Persekutuan Terbesar). Pohon faktor pun dapat digunakan untuk menemukan nilai akar, bahkan untuk akar yang hasilnya tidak bulat.</p>
 
-Konsepnya sebenarnya sangat sederhana, yaitu kita akan memecah bilangan besar menjadi beberapa bilangan kecil agar lebih mudah mencari nilai dari sebuah akar :
+        <p>Konsepnya sebenarnya sangat sederhana, yaitu kita akan memecah bilangan besar menjadi beberapa bilangan kecil agar lebih mudah mencari nilai dari sebuah akar:</p>
 
- = 
+        \[\sqrt{ab} = \sqrt{a} \times \sqrt{b}\]
 
-Contoh: Sederhanakan 
+        <p><strong>Contoh 1 : Sederhanakan bentuk</strong> \(\mathbf{\sqrt{128}}\)</p>
  
+        <p><strong>I. Buat pohon faktor untuk mencari faktorisasi primanya</strong><br>Bagi \(128\) terus-menerus dengan bilangan prima terkecil sampai ke bentuk yang paling kecil dan tidak bisa dibagi lagi:</p>
 
-I. Buat pohon faktor untuk mencari faktorisasi primanya, yaitu membagi 128 terus-menerus dengan bilangan prima terkecil:
+         <div class="pohon-faktor">
+           <script type="text/tikz">
+             \begin{tikzpicture}[
+             level distance=1.2cm, 
+             sibling distance=1.5cm,
+               % Styling default untuk node lingkaran (faktor prima)
+             prime/.style={circle, draw, thick, inner sep=2pt},
+               % Styling untuk node biasa yang belum prima (bukan lingkaran)
+             normal/.style={}
+             ]
+              \node [normal] {128}
+                child {node [prime] {2}}
+                child {node [normal] {64}
+                 child {node [prime] {2}}
+                 child {node [normal] {32}
+                  child {node [prime] {2}}
+                  child {node [normal] {16}
+                   child {node [prime] {2}}
+                   child {node [normal] {8}
+                    child {node [prime]{2}}
+                    child {node [normal]{4}
+                     child {node [prime]{2}}
+                     child {node [normal]{2}
+                      child {node [prime]{2}}
+                      child {node [normal]{1}}
+                     }
+                    }
+                   }
+                  }
+                 }
+                };
+              \end{tikzpicture}
+          </script>
+        </div>
 
- = 
- × 
- × 
- × 
- × 
- × 
- × 
- × 
+        \[128 = 2 \times 2 \times 2 \times 2 \times 2 \times 2 \times 2\]
+
+        <p><strong>II. Kelompokkan faktor yang sama secara berpasangan.</strong></p>
+
+        \[128 = (2 \times 2) \times (2 \times 2) \times (2 \times 2) \times 2\]
+
+        <p><strong>III. Kalikan hasil dari setiap kelompok dan pisahkan antara hasil kelompok bilangan kembar dengan yang tidak kembar:</strong></p>
+
+        \[
+        \begin{align*}
+        128 &amp;= ((2 \times 2) \times (2 \times 2) \times (2 \times 2)) \times 2
+        \\
+        128 &amp;= (4 \times 4 \times 4) \times 2 \\
+        128 &amp;= 64 \times 2
+        \end{align*}
+        \]
+
+        <p><strong>IV. Substitusikan ke akar dan cari hasil akarnya masing-masing</strong></p>
+
+        \[\sqrt{128} \rightarrow \sqrt{64} \times \sqrt{2}\]
+
+        <ul>
+          <li>\(\sqrt{64} = 8 \times 8\)</li>
+          <li>\(\sqrt{2}\) = <em>Tidak ada, maka tetap dalam bentuk akar (\(\sqrt{2}\)) </em></li>
+        </ul>
+
+        <p>Maka didapatkan hasilnya: \(\mathbf{\sqrt{128} = 8\sqrt{2}}\)</p>
+
+        <img class="gambar" title="mencari akar dengan pohon faktor" alt="akar dari 128" data-original-height="960" data-original-width="1103" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDs8xgb181N0KzKQhprM19dUOhCKVqR0iWyWgFBkMqnrI2KshuXtqK_xzw-G1WzapNtqHXlfthAmcSZbnrICLMKqezLvIOz2Rs5GLYng1ZM1_zue-ywWaaSuj0eH5tdflR2PHCld3lOAbnbmEcIDY_6Iw48QNqC3FyTe6mmFSsggln382JNWCtQ4Gx2MML/s1600/1787559825718.png" />
+
+        <p><strong>Contoh 2 : Sederhanakan \(\mathbf{\sqrt{243}}\)</strong></p>
+
+        <p><strong>I. Buat pohon faktor untuk mencari faktorisasi primanya:</strong></p>
+
+        <div class="pohon-faktor">
+           <script type="text/tikz">
+             \begin{tikzpicture}[
+             level distance=1.2cm, 
+             sibling distance=1.5cm,
+               % Styling default untuk node lingkaran (faktor prima)
+             prime/.style={circle, draw, thick, inner sep=2pt},
+               % Styling untuk node biasa yang belum prima (bukan lingkaran)
+             normal/.style={}
+             ]
+             \node [normal]{243}
+              child {node[prime]{3}}
+              child {node[normal]{81}
+               child {node[prime]{3}}
+               child {node[normal]{27}
+                child {node[prime]{3}}
+                child {node [normal]{9}
+                 child {node[prime]{3}}
+                 child {node[normal]{3}
+                  child {node[prime]{3}}
+                  child {node[normal]{1}}
+                 }
+                }
+               }
+              };
+            \end{tikzpicture}
+          </script>
+        </div>
+
+        \[243 = 3 \times 3 \times 3 \times 3 \times 3\]
+
+        <p><strong>II. Kelompokkan angka yang kembar:</strong></p>
+
+        \[243 = (3 \times 3) \times (3 \times 3) \times 3\]
+
+        <p><strong>III. Ambil satu angka dari setiap kelompok angka yang kembar lalu kalikan satu sama lain:</strong></p>
+
+        \[
+        \begin{align*}
+        243 &amp;= ({\color{#e41b17}{3}} \times 3) \times ({\color{#e41b17}{3}} \times 3) \times 3)\\
+        243 &amp;= ({\color{#e41b17}{3}} \times {\color{#e41b17}{3}}) \times 3\\
+        243 &amp;= {\color{#e41b17}{9}} \times 3
+        \end{align*}\]
+
+        <p><strong>IV. Angka hasil perkalian pasangan diletakkan di luar akar, sedangkan angka yang tidak berpasangan tetap di dalam akar:</strong></p>
+
+        \[\sqrt{243} = \mathbf{9 \sqrt{3}}\]
+
+      </section>
+
+      <section id="estimasi">
+
+        <h2 class="judul_Materi">3. Estimasi Nilai Desimal Akar</h2>
+
+        <p>Di metode terakhir ini kita akan menebak nilai angka yang sulit \(x\) dengan bantuan bilangan kuadrat sempurna terdekat \(s\). </p>
+
+        <p>Berbeda dengan cara sebelumnya yang menghasilkan bentuk eksak \(a\sqrt{b}\), metode ini digunakan untuk mencari estimasi nilai desimalnya.</p>
+
+        <div class="rumus_sed">
+          <h3>Rumus:</h3>
+
+          \[\mathbf{\sqrt{x} ≈ \sqrt{s} + \frac{x - s}{2\sqrt{s}}}\]
+
+          <p>\(x\) = nilai akar yang dicari<br>
+             \(s\) = nilai akar terdekat</p>
+        </div>
+
+        <p><strong>Contoh 1 : Tentukan Nilai dari </strong>\(\mathbf{\sqrt{80}}\)</p>
  
+        <p>Nilai akar terdekatnya: \(\sqrt{81} = 9\)</p>
+        
+        <p>Substitusikan ke dalam rumus:</p>
 
-II. ​Kelompokkan angka yang sama berpasangan (dua-dua): 
+        \[
+        \begin{align*}
+        \sqrt{80} &amp;≈ \sqrt{81} + \frac{80 - 81}{2\sqrt{81}}\\
+        \sqrt{80} &amp;≈ 9 + \frac{-1}{2(9)}\\
+        \sqrt{80} &amp;≈ 9 + \frac{-1}{18}\\
+        \sqrt{80} &amp;≈ 9 - 0,055\\
+        \sqrt{80} &amp;≈ \mathbf{8,944}
+        \end{align*}
+        \]
 
- = 
- × 
- × 
- × 
- × 
- × 
- × 
- × 
- 
+        <img class="gambar" title="Pohon faktor 1" alt="Akar dari 80" src="https://raw.githubusercontent.com/Magenta-id/Mencari-nilai-akar/refs/heads/main/1793582883238.jpg"/>
 
-III. Kalikan hasil dari setiap kelompok dan pisahkan antara hasil kelompok bilangan kembar dengan yang tidak kembar: 
+        <p><strong>Contoh 2 : Tentukan nilai dari</strong> \(\mathbf{\sqrt{12}}\)</p>
 
- = 
- × 
- × 
- × 
- × 
+        <p>Nilai akar terdekatnya: \(\sqrt{9} = 12\)</p>
 
- = 
- × 
- 
+        <p>Subtitusikan ke rumus:</p>
 
-IV. Substitusikan ke akar: 
+        \[
+        \begin{align*}
+        \sqrt{12} &amp;≈ \sqrt{9} + \frac{12 - 9}{2\sqrt{9}}\\
+        \sqrt{12} &amp;≈ 3 + \frac{3}{2(3)}\\
+        \sqrt{12} &amp;≈ 3 + \frac{3}{6}\\
+        \sqrt{12} &amp;≈ 3 + 0,5\\
+        \sqrt{12} &amp;≈ \mathbf{3,5}
+        \end{align*}
+        \]
 
- = 
- 
+        <img class="gambar" title="Pohon faktor 2" alt="Akar dari 12" src="https://raw.githubusercontent.com/Magenta-id/Mencari-nilai-akar/refs/heads/main/1793583327771.jpg"/>
 
-V. Cari hasil akar nya:
+        <div class="catatan">
+          <h3>CATATAN PENTING:</h3>
+          <p>Tanda (≈) mendekati (approximately equals) memiliki arti bahwa nilai di kiri dan kanan tidak persis sama, tetapi sangat dekat. Tanda ini digunakan untuk nilai estimasi, pembulatan desimal, atau hasil pengoperasian angka irasional.</p>
+        </div>
 
- = 
- × 
- 
- = Tidak ada, maka tetap dalam bentuk akar 
- 
+      </section>
 
-Maka didapatkan hasilnya :
-
- = 
- 
-
-
-
-
-Contoh : Sederhanakan 
- 
-
-I. Buat pohon faktor untuk mencari faktorisasi primanya, yaitu membagi 
- terus-menerus dengan bilangan prima terkecil:
-
- = 
- × 
- × 
- × 
- × 
-
-II. Kelompokkan angka yang sama berpasangan (dua-dua) : 
-
- = 
- × 
- × 
- × 
- × 
-
-III. Ambil satu angka dari setiap kelompok angka yang kembar lalu kalikan satu sama lain :
-
- = (
- × 
- × (
-× 
- × 
- 
- = (
- × 
-) × 
- 
- = 
- × 
- 
-
-IV. Angka hasil dari perkalian angka kembar ditaruh di luar akar (karena angka itu sudah pasti bisa dikuadratkan, sementara angka hasil perkalian dari angka yang tidak memiliki pasangan akan tetap di dalam akar :
-
- = 
- 
-
-
-
-3. Estimasi Nilai Desimal Akar
-Di metode terakhir ini kita akan menebak nilai angka yang sulit 
- dengan bantuan bilangan kuadrat sempurna terdekat 
-. 
-
-Berbeda dengan cara sebelumnya yang menghasilkan bentuk eksak a\sqrt{b}, metode ini digunakan untuk mencari estimasi nilai desimalnya.
-
-Rumusnya:
-
- ≈ 
- + 
- 
-
- = Nilai akar terdekat
- = Nilai akar yang dicari
-
-Contoh: Tentukan Nilai dari 
- 
-
-Cari nilai akar terdekatnya:
- = 
- 
-
-Substitusikan ke dalam rumus:
-
- 
- 
- 
-CATATAN PENTING:
-Tanda (≈) mendekati (approximately equals) memiliki arti bahwa nilai di kiri dan kanan tidak persis sama, tetapi sangat dekat. Tanda ini digunakan untuk nilai estimasi, pembulatan desimal, atau hasil pengoperasian angka irasional. 
-
-Penutup
-Itulah beberapa cara praktis untuk mencari nilai akar. Melalui pemahaman metode ini dan latihan rutin, materi akar tidak akan lagi terasa sulit.
-
-Yang terpenting bukanlah seberapa berbakat kita, melainkan seberapa konsisten kita mau mencoba.
-
-
-Komentar
-
-Postingan populer dari blog ini
-Trik Menghitung Perkalian dengan Cepat dan Mudah.
-Agustus 03, 2026
-Memuat artikel...
-Baca selengkapnya
-Catatan Aljabar Dasar: Dari Mana Kita Harus Mulai Belajar?
-September 09, 2026
-Aljabar Adalah cabang matematika yang mempelajari simbol seperti huruf x, y, z, a, dan aturan untuk mengolah simbol tersebut. Sebagai permulaan, berikut adalah beberapa poin penting yang akan kita pelajari: 📌 Daftar Isi Artikel A. Tujuan Aljabar B. Unsur-Unsur dalam Aljabar C. Jenis - Jenis Operasi Aljabar D. Sifat - sifat Aljabar E. Identitas Aljabar F. Pemfaktoran Aljabar ▲ A. Tujuan Aljabar Menyelesaikan nilai yang belum diketahui Contoh: Kita akan mencari nilai 
- 
-Menyederhanakan bentuk matematika Contoh: 
- Membuat model matematika dari permasalahan sehari-hari Contoh: Menghitung harga barang, kecepatan, umur, dan lain-lain. Menghitung hubungan antara berbagai besaran Contoh: Hubungan jarak, waktu, dan kecepatan mema...
-Baca selengkapnya
- Diberdayakan oleh Blogger
-Gambar tema oleh chuwy
-
-Magenta
-Kunjungi profil
-Arsip
-Laporkan Penyalahgunaan
-      
     </main>
+
+    <footer>
+      <h2 class="judul_Materi">Penutup</h2>
+
+      <p>Itulah beberapa cara praktis untuk mencari nilai akar. Melalui pemahaman metode ini dan latihan rutin, materi akar tidak akan lagi terasa sulit.</p>
+
+      <p>Yang terpenting bukanlah seberapa berbakat kita, melainkan seberapa konsisten kita mau mencoba.</p>
+    </footer>
 
     <script src="./script.js"></script>
   </body>

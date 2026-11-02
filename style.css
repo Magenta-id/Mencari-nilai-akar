@@ -160,7 +160,7 @@ h3 {
 .asal_rumus h3 { margin-top: -0.1rem; }
 
 .catatan{
-  background-color: #CFECEC;
+  background-color: #F0F8FF;
   border-radius: 3px;
   position: relative;
   padding-left: 15px; 
@@ -197,3 +197,10 @@ h3 {
 }
 
 /*Yang diatas wajib ada ya!! */
+
+.pohon-faktor {
+  display: flex;
+  justify-content: center; /* Mengatur posisi horizontal: center, flex-start (kiri), flex-end (kanan) */
+  align-items: center;
+  margin: 20px 0;
+}

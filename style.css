@@ -64,14 +64,13 @@ h3 {
 }
 #daftar_isi *:last-child { margin-bottom: 0; }
 .isi_DaIs li a {
-  display: inline-block;
+  display: block;
   position: relative;
   color: #4a5568;
   text-decoration: none;
   padding: 3px 0;
   transition: color 0.25s ease;
 }
-
 /* Membuat garis bawah tersembunyi secara default */
 .isi_DaIs li a::after {
   content: '';
@@ -80,7 +79,7 @@ h3 {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #3182ce;
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;

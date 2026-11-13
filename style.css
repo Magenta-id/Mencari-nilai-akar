@@ -1,17 +1,28 @@
 /* Untuk math agar tidak offside */
 
+/* 1. Paksa kontainer utama agar tidak pernah lebih dari layar */
 mjx-container {
-  max-width: 100%;
-  box-sizing: border-box;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
 }
 
+/* 2. Tangani rumus yang berdiri sendiri (display mode) */
 mjx-container[display] {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin: 0.5em 0;
-  padding: 2px 0;
+    display: block !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    -webkit-overflow-scrolling: touch;
+    margin: 0.8em auto !important;
+    padding: 4px 0 !important;
+}
+
+/* 3. INI KUNCINYA: Paksa SVG internal agar tunduk pada lebar kontainer */
+mjx-container svg {
+    max-width: 100% !important;
+    height: auto !important;
 }
 
 /* Hanya mengubah warna teks dasar MathJax menjadi hitam, tanpa merusak warna kustom */

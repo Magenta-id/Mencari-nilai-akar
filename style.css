@@ -1,208 +1,3 @@
-mjx-container {
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-mjx-container[display] {
-  display: block;
-  max-width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  margin: 0.5em 0;
-  padding: 2px 0;
-}
-
-/* Hanya mengubah warna teks dasar MathJax menjadi hitam, tanpa merusak warna kustom */
-mjx-container, mjx-math, mjx-mrow {
-    color: #000;
-}
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: 'Poppins', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-p, li, h1, h2, h3, h4, h5, h6 { color: #000; }
-
-p { font-size: 1rem; }
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.judul_DaIs {
-  margin-top: 0;
-  margin-bottom: -1rem;
-}
-#daftar_isi {
-  background-color: #FFFFF7;
-  /* Untuk warna dasar background */
-  background-image: linear-gradient(#F5F5F5, #F5F5F5), linear-gradient(to right, #0909FF, #F70D1A);
-  /* LG_1 untuk menimpa warna background utama, LG_2 untuk menimpa warna border */
-  background-origin: border-box;
-  /* Berfungsi untuk memastikan bahwa titik awal koordinat perhitungan posisi kedua gradien dimulai dari tepi paling luar kotak (border-box), sehingga posisinya benar-benar presisi dan sejajar dari ujung ke ujung.*/
-  background-clip: padding-box, border-box;
-  /* Posisi untuk lg_1 dan lg_2 */
-  border: 2px solid transparent;
-  /* Membuat garis batas + transparan agar warna border nanti bisa ditimpa/ditembus */
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem 2rem;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-#daftar_isi *:last-child { margin-bottom: 0; }
-.isi_DaIs li a {
-  display: block;
-  position: relative;
-  color: #4a5568;
-  text-decoration: none;
-  padding: 3px 0;
-  transition: color 0.25s ease;
-}
-/* Membuat garis bawah tersembunyi secara default */
-.isi_DaIs li a::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #3182ce;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.isi_DaIs li a:hover { color: #3182ce; }
-/* Memunculkan garis bawah dari kiri ke kanan saat hover */
-.isi_DaIs li a:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-
-.judul_Materi {
-  position: relative;
-  padding-bottom: 10px;
-  width: fit-content;
-}
-.judul_Materi::before {
-  background: linear-gradient(135deg, #0909FF, #F70D1A);
-  border-radius: 3px;
-  bottom: 0;
-  content: '';
-  height: 5px;
-  left: 0;
-  position: absolute;
-  width: calc(100% + 20px);
-}
-
-.gambar {
-  border-radius:6px;
-  display: block;
-  height: auto;
-  margin: 0 auto;
-  max-width: 650px;
-  width: 100%;
-}
-
-.judul_sed { margin-top: -0.5rem; }
-.rumus_sed{
-  background-image: linear-gradient(#FEFCFF, #FEFCFF), linear-gradient(to right, #EAC117, #FF8C00);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-
-#tips_trik{
-  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #045F5F, #228B22);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-#tips_trik h3 { margin-top: -0.2rem; }
-
-.asal_rumus {
-  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #00FFFF, blue);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  border: 2px solid transparent;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-  box-sizing: border-box;
-  margin: 2rem auto;
-  max-width: 35rem;
-  padding: 1rem 1rem;
-}
-.asal_rumus h3 { margin-top: -0.1rem; }
-
-.catatan{
-  background-color: #F0F8FF;
-  border-radius: 3px;
-  position: relative;
-  padding-left: 15px; 
-  width: fit-content;
-}
-.catatan::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;             /* Membuat tinggi garis mengikuti tinggi teks */
-  width: 5px;            /* Ketebalan garis vertikal */
-  height: 100%;          /* Atau atur tinggi spesifik, misal: 80% */
-  background: linear-gradient(135deg, #000080, #14A3C7);
-  border-radius: 3px;
-}
-.catatan h3{color: #151B54;}
-
-.sub_bab{
-  position: relative;
-  padding-left: 15px; 
-  width: fit-content;
-}
-.sub_bab::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;             /* Membuat tinggi garis mengikuti tinggi teks */
-  width: 5px;            /* Ketebalan garis vertikal */
-  height: 100%;          /* Atau atur tinggi spesifik, misal: 80% */
-  background: linear-gradient(135deg, red, pink);
-  border-radius: 3px;
-}
-
-/* Styling Tombol Melayang Back to Top */
-#btnBackToTop {
-  display: none; /* Sembunyikan awal (hanya muncul saat di-scroll) */
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 99;
 /* Untuk math agar tidak offside */
 
 mjx-container {
@@ -349,27 +144,6 @@ h3.daftar-isi {
 }
 
 /* Batas */
-
-/* Sub-bab */
-.sub-bab {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #1e293b;
-  margin: 2rem 0 1rem 0;
-  padding-left: 0.85rem;
-  position: relative;
-  line-height: 1.4;
-}
-.sub-bab::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.1rem;
-  bottom: 0.1rem;
-  width: 4px;
-  border-radius: 4px;
-  background: linear-gradient(to bottom, #2563eb 0%, #06b6d4 100%);
-}
 
 /* Gambar */
 /* Menargetkan semua gambar langsung di CodePen */
@@ -611,25 +385,324 @@ h3.catatan {
 
 /* Batas */
 
-.rumuskedua {
-  background-color: #f4f7fb; /* Latar biru keabu-abuan sangat muda */
-  border-left: 5px solid #2b7de9; /* Garis aksen biru di sisi kiri */
-  border-radius: 12px; /* Sudut membulat di keempat sisi */
-  padding: 2rem; /* Ruang dalam kotak */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Bayangan halus */
-  font-family: 'Georgia', 'Times New Roman', serif; /* Font serif untuk teks */
-  color: #1f2937;
-  margin : 2rem auto;
-  max-width: 35rem;
-  width: 100%;
+/* Sintaks game */
+
+.bk-quiz-box {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 24px;
+  margin: 32px auto;          /* Mengatur jarak atas-bawah dan membuat kotak berada di tengah */
+  max-width: 650px;           /* Membatasi lebar maksimal agar tidak terlalu lebar di layar besar */
+  width: 92%;                 /* Lebar aman di HP (menyisakan sedikit ruang di sisi kiri-kanan) */
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+  text-align: left;
+  color: #1e293b;
+  box-sizing: border-box;
 }
 
-.rumuskedua h3 {
-  margin-top: 0;
+
+.bk-quiz-box * {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Header */
+.bk-header {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 14px;
+}
+
+.bk-badge {
+  display: inline-block;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bk-title {
+  margin: 0 0 4px 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.bk-subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* Controls & Pills */
+.bk-control-group {
+  margin-bottom: 18px;
+}
+
+.bk-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.bk-pill-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.bk-pill {
+  background: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  color: #475569;
+  padding: 7px 13px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bk-pill:hover {
+  border-color: #94a3b8;
+  background: #f1f5f9;
+}
+
+.bk-pill.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.bk-custom-range {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: #f8fafc;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px dashed #cbd5e1;
+}
+
+.bk-custom-range input {
+  width: 100px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.bk-custom-range span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Buttons */
+.bk-btn-primary {
+  width: 100%;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  margin-top: 6px;
+}
+
+.bk-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+.bk-btn-secondary {
+  width: 100%;
+  background: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 14px;
+  transition: background 0.2s ease;
+}
+
+.bk-btn-secondary:hover {
+  background: #334155;
+}
+
+.bk-btn-link {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+}
+
+.bk-btn-link:hover {
+  text-decoration: underline;
+}
+
+/* Practice Area */
+.bk-practice-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 16px;
-  font-size: 1.5rem;
-  color: #111827;
+}
+
+.bk-badge-subtle {
+  font-size: 12px;
+  font-weight: 500;
+  color: #64748b;
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.bk-question-card {
+  background: #f8fafc;
+  border-left: 4px solid #2563eb;
+  padding: 18px;
+  border-radius: 8px;
+  margin-bottom: 18px;
+}
+
+.bk-question-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.bk-question-text strong {
+  color: #2563eb;
+  font-weight: 700;
+}
+
+/* Essay Input */
+.bk-input-answer {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 16px;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.bk-input-answer:focus {
+  border-color: #2563eb;
+}
+
+/* Multiple Choice Grid */
+.bk-mc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.bk-mc-option {
+  background: #ffffff;
+  border: 2px solid #cbd5e1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.bk-mc-option:hover:not(:disabled) {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.bk-mc-option.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+  color: #15803d;
+}
+
+.bk-mc-option.wrong {
+  background: #fee2e2;
+  border-color: #dc2626;
+  color: #b91c1c;
+}
+
+/* Feedback & Smart Hint */
+.bk-feedback {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.bk-feedback.success {
+  background: #f0fdf4;
+  border: 1.5px solid #86efac;
+  color: #166534;
+}
+
+.bk-feedback.error {
+  background: #fef2f2;
+  border: 1.5px solid #fecaca;
+  color: #991b1b;
+}
+
+.bk-feedback-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.bk-feedback-desc {
+  margin: 0;
+}
+
+.bk-hint {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed rgba(185, 28, 28, 0.25);
+  color: #7f1d1d;
+  font-size: 13.5px;
+}
+
+@media (max-width: 480px) {
+  .bk-quiz-box {
+    padding: 18px;
   }
+  .bk-mc-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /*Yang diatas wajib ada ya!! */
 

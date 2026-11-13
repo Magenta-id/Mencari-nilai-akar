@@ -60,11 +60,12 @@
         
         <nav>
           <div class="daftar-isi">
-            <h3>📝 Materi yang Dibahas:</h3>
+            <h3 class="daftar-isi">📝 Materi yang Dibahas:</h3>
             <ol>
               <li><a href="#Trik_pisah">Trik Pisahkan Dua Digit</a></li>
               <li><a href="#pohon_faktor">Pohon Faktor</a></li>
               <li><a href="#estimasi">Estimasi Nilai Desimal Akar</a></li>
+              <li><a href="#kuis">Uji Ketangkasan Menghitung Akar</a></li>
             </ol>
           </div>
         </nav>
@@ -301,14 +302,14 @@ Maka ditemukan hasil puluhannya = \(50\)</p>
              normal/.style={}
              ]
               \node [normal] {128}
-                child {node [prime] {2}}
-                child {node [normal] {64}
-                 child {node [prime] {2}}
-                 child {node [normal] {32}
-                  child {node [prime] {2}}
-                  child {node [normal] {16}
-                   child {node [prime] {2}}
-                   child {node [normal] {8}
+                child {node [prime]{2}}
+                child {node [normal]{64}
+                 child {node [prime]{2}}
+                 child {node [normal]{32}
+                  child {node [prime]{2}}
+                  child {node [normal]{16}
+                   child {node [prime]{2}}
+                   child {node [normal]{8}
                     child {node [prime]{2}}
                     child {node [normal]{4}
                      child {node [prime]{2}}
@@ -419,7 +420,7 @@ Maka ditemukan hasil puluhannya = \(50\)</p>
 
         <p>Berbeda dengan cara sebelumnya yang menghasilkan bentuk eksak \(a\sqrt{b}\), metode ini digunakan untuk mencari estimasi nilai desimalnya.</p>
 
-        <div class="rumus_sed">
+        <div class="rumus">
           <h3>Rumus:</h3>
 
           \[\mathbf{\sqrt{x} ≈ \sqrt{s} + \frac{x - s}{2\sqrt{s}}}\]
@@ -468,9 +469,77 @@ Maka ditemukan hasil puluhannya = \(50\)</p>
           <h3>CATATAN PENTING:</h3>
           <p>Tanda (≈) mendekati (approximately equals) memiliki arti bahwa nilai di kiri dan kanan tidak persis sama, tetapi sangat dekat. Tanda ini digunakan untuk nilai estimasi, pembulatan desimal, atau hasil pengoperasian angka irasional.</p>
         </div>
-
       </section>
 
+      <section id="kuis">
+        <h2 class="judul_Materi">Uji Ketangkasan Menghitung Akar</h2>
+
+        <p>Cara terbaik memastikan sebuah trik matematika benar-benar melekat di kepala adalah dengan langsung mencobanya. Silakan pilih kategori materi dan level tantangan di bawah ini untuk melihat sejauh mana ketelitian dan kecepatanmu dalam menaklukkan soal-soal akar kuadrat.</p>
+
+        <div class="card-kuis">
+          <h3>Uji Pemahaman: Kuis Kilat Akar Kuadrat</h3>
+          <p class="kuis-desc" id="menu-instruction">Pilih bab materi yang ingin kamu uji:</p>
+
+          <!-- TAHAP 1: Pilih Bab -->
+          <div id="step-chapter" class="quiz-menu">
+            <button class="btn-mode" onclick="selectChapter('bulat')">🎯 Bab 1: Trik Akar Bulat</button>
+            <button class="btn-mode" onclick="selectChapter('pohon')">🌳 Bab 2: Pohon Faktor</button>
+            <button class="btn-mode" onclick="selectChapter('desimal')">📐 Bab 3: Estimasi Desimal</button>
+            <button class="btn-mode btn-mix" onclick="selectChapter('campuran')">⚡ Tantangan Campuran (Semua Bab)</button>
+          </div>
+
+          <!-- TAHAP 2: Pilih Level (Disembunyikan di awal) -->
+          <div id="step-level" class="quiz-menu" style="display: none;">
+            <div class="level-grid-modern">
+              <button class="btn-level-card" onclick="selectLevel(1)">
+                <span class="lvl-num">Level 1</span>
+                <span class="lvl-desc">Pemanasan Awal</span>
+              </button>
+              <button class="btn-level-card" onclick="selectLevel(2)">
+                <span class="lvl-num">Level 2</span>
+                <span class="lvl-desc">Tingkat Dasar</span>
+              </button>
+              <button class="btn-level-card" onclick="selectLevel(3)">
+                <span class="lvl-num">Level 3</span>
+                <span class="lvl-desc">Tingkat Menengah</span>
+              </button>
+              <button class="btn-level-card" onclick="selectLevel(4)">
+                <span class="lvl-num">Level 4</span>
+                <span class="lvl-desc">Tingkat Mahir</span>
+              </button>
+              <button class="btn-level-card lvl-expert" onclick="selectLevel(5)">
+                <span class="lvl-num">Level 5</span>
+                <span class="lvl-desc">Tantangan Ekstrem</span>
+              </button>
+            </div>
+            <button class="btn-back-step" onclick="backToChapter()">⬅ Kembali Pilih Bab</button>
+          </div>
+
+          <!-- TAHAP 3: Area Pertanyaan Kuis -->
+          <div id="quiz-container" style="display: none;">
+            <div class="quiz-header-info">
+              <span id="question-progress">Soal 1 dari 1</span>
+              <button class="btn-back-menu" onclick="backToLevel()">⬅ Ganti Level</button>
+            </div>
+            <div class="question-box">
+              <h4 id="question-text">Pertanyaan akan muncul di sini...</h4>
+            </div>
+            <div id="options-container" class="options-container">              
+            </div>
+            <div id="feedback-box" class="feedback-box" style="display: none;">              
+            </div>
+            <button id="next-btn" class="btn-next" style="display: none;" onclick="nextQuestion()">Lanjut Soal Berikutnya ➡</button>
+          </div>
+
+          <!-- TAHAP 4: Area Hasil Akhir -->
+          <div id="quiz-result" class="quiz-result" style="display: none;">
+            <h4>🎉 Level Selesai!</h4>
+            <p id="score-text">Skor kamu: 0 dari 5</p>
+            <p id="score-message" class="score-message"></p>
+            <button class="btn-mode" onclick="backToLevel()" style="text-align: center;">Pilih Level Lain</button>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>

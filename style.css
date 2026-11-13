@@ -1,14 +1,13 @@
 /* Untuk math agar tidak offside */
 
-/* 1. Paksa kontainer utama agar tidak pernah lebih dari layar */
+/* 1. Pengaturan dasar untuk semua MathJax (tanpa paksa scroll box untuk inline) */
 mjx-container {
-    max-width: 100% !important;
     box-sizing: border-box !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
+    color: #000;
 }
 
-/* 2. Tangani rumus yang berdiri sendiri (display mode) */
+/* 2. KHUSUS RUMUS PANJANG / DISPLAY (Berdiri sendiri / Block mode) */
+/* Di sinilah fungsi scroll horizontal dipasang karena berisiko keluar layar */
 mjx-container[display] {
     display: block !important;
     max-width: 100% !important;
@@ -19,13 +18,13 @@ mjx-container[display] {
     padding: 4px 0 !important;
 }
 
-/* 3. INI KUNCINYA: Paksa SVG internal agar tunduk pada lebar kontainer */
-mjx-container svg {
+/* 3. Paksa SVG internal pada rumus blok agar tunduk pada lebar kontainer */
+mjx-container[display] svg {
     max-width: 100% !important;
     height: auto !important;
 }
 
-/* Hanya mengubah warna teks dasar MathJax menjadi hitam, tanpa merusak warna kustom */
+/* Mengubah warna teks dasar MathJax menjadi hitam */
 mjx-container, mjx-math, mjx-mrow {
     color: #000;
 }

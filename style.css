@@ -471,3 +471,245 @@ h3.catatan {
     border-left: 3px solid #3b82f6;
 }
 
+/* CSS kuis */
+.card-kuis {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 35rem;
+    width: 100%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.card-kuis h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.kuis-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+/* Menu Pilihan Bab */
+.quiz-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.btn-mode {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-mode:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.btn-mix {
+    background: #eff6ff;
+    border-color: #93c5fd;
+    color: #1d4ed8;
+}
+
+.btn-mix:hover {
+    background: #dbeafe;
+}
+
+/* Grid Pilihan Level Modern */
+.level-grid-modern {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.btn-level-card {
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: left;
+}
+
+.btn-level-card:hover {
+    background: #eff6ff;
+    border-color: #2563eb;
+}
+
+.btn-level-card .lvl-num {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.btn-level-card .lvl-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.btn-level-card.lvl-expert {
+    background: #fef2f2;
+    border-color: #fca5a5;
+}
+
+.btn-level-card.lvl-expert .lvl-num {
+    color: #991b1b;
+}
+
+.btn-back-step {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 6px 0;
+    text-align: left;
+}
+
+.btn-back-step:hover {
+    color: #1e293b;
+}
+
+/* Header Kuis & Navigasi */
+.quiz-header-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.btn-back-menu {
+    background: none;
+    border: none;
+    color: #2563eb;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0;
+}
+
+.btn-back-menu:hover {
+    text-decoration: underline;
+}
+
+/* Kotak Soal & Tombol Pilihan */
+.question-box {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    border-left: 3px solid #2563eb;
+}
+
+.question-box h4 {
+    font-size: 1rem;
+    color: #1e293b;
+    margin: 0;
+}
+
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.btn-option {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #334155;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-option:hover:not(:disabled) {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+}
+
+.btn-option.correct {
+    background: #f0fdf4 !important;
+    border-color: #86efac !important;
+    color: #166534 !important;
+    font-weight: 600;
+}
+
+.btn-option.incorrect {
+    background: #fef2f2 !important;
+    border-color: #fca5a5 !important;
+    color: #991b1b !important;
+}
+
+.feedback-box {
+    font-size: 0.88rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 14px;
+    background: #f8fafc;
+    color: #475569;
+}
+
+.btn-next {
+    width: 100%;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-next:hover {
+    background: #1d4ed8;
+}
+
+.quiz-result {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.quiz-result h4 {
+    font-size: 1.2rem;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.score-message {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
